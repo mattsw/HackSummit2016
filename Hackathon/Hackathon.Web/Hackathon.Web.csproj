@@ -171,6 +171,8 @@
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="client\app.js" />
+    <Content Include="client\directives\task.html" />
+    <Content Include="client\directives\task.js" />
     <Content Include="client\main\main.html" />
     <Content Include="client\main\mainCtrl.js" />
     <Content Include="client\services\boardItemService.js" />

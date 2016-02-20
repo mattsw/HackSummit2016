@@ -16,8 +16,6 @@ C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\Hackathon.Web.dll
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\Hackathon.Web.pdb
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\Antlr3.Runtime.dll
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\Autofac.dll
-C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\EntityFramework.dll
-C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\EntityFramework.SqlServer.dll
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\Hackathon.Core.dll
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\Hackathon.Repository.dll
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\Hackathon.Service.dll
@@ -25,8 +23,6 @@ C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\Microsoft.CodeDom.Provide
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\Microsoft.Web.Infrastructure.dll
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\Newtonsoft.Json.dll
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\System.Data.SQLite.dll
-C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\System.Data.SQLite.EF6.dll
-C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\System.Data.SQLite.Linq.dll
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\System.Net.Http.Formatting.dll
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\System.Web.Helpers.dll
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\System.Web.Http.dll
@@ -42,8 +38,6 @@ C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\Hackathon.Core.pdb
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\Hackathon.Repository.pdb
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\Hackathon.Service.pdb
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\Autofac.xml
-C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\EntityFramework.xml
-C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\EntityFramework.SqlServer.xml
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\System.Data.SQLite.xml
 C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\Newtonsoft.Json.xml

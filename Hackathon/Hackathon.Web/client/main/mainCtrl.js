@@ -3,14 +3,13 @@
         module('board').
         controller('MainCtrl', mainCtrl);
 
-    mainCtrl.$inject = ['$state', 'boardItemService'];
+    mainCtrl.$inject = ['$state', 'boardItemService', 'tasks'];
 
-    function mainCtrl($state, boardItemService) {
+    function mainCtrl($state, boardItemService, tasks) {
         var vm = this;
 
-        vm.model = boardItemService.getBoardItems();
+        vm.model = tasks.data;
         //vm.model = boardItemService.getBoardItemsForUser(2);
-
 
         vm.updateItemStatus = updateItemStatus;
 

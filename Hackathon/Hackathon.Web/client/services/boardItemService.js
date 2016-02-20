@@ -20,7 +20,15 @@
         }
 
         function getBoardItemsForUser(userId) {
-            return $http.get('api/task/' + userId);
+            return $http.get('api/task/' + userId).then(success, error);
+
+            function success(response) {
+                return response;
+            }
+
+            function error(response) {
+                console.log('Didnt work from server');
+            }
         }
 
         return service;

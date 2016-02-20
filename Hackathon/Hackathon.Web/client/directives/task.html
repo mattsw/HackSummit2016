@@ -1,0 +1,10 @@
+﻿<div class="summary">
+    <div><label>Summary </label></div>
+    <a href="#" editable-text="task.summary">{{ task.summary || 'empty' }}</a>
+</div>
+<div class="description">
+    <div><label>Description </label></div>
+    <a href="#" editable-textarea="task.description" e-rows="7" e-cols="40">
+        <pre>{{ task.description || 'no description' }}</pre>
+    </a>
+</div>
