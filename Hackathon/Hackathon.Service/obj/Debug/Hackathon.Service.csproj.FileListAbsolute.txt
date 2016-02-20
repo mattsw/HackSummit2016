@@ -1,4 +1,3 @@
-C:\git\HackSummit2016\Hackathon\Hackathon.Service\obj\Debug\Hackathon.Service.csprojResolveAssemblyReference.cache
 C:\projects\HackSummit2016\Hackathon\Hackathon.Service\bin\Debug\Hackathon.Service.dll.config
 C:\projects\HackSummit2016\Hackathon\Hackathon.Service\bin\Debug\Hackathon.Service.dll
 C:\projects\HackSummit2016\Hackathon\Hackathon.Service\bin\Debug\Hackathon.Service.pdb

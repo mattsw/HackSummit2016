@@ -67,7 +67,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\BoardItem.cs" />
+    <Compile Include="Models\Board\BoardItem.cs" />
+    <Compile Include="Models\Board\BoardState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

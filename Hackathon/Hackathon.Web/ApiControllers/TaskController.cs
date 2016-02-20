@@ -2,7 +2,7 @@
 {
     using System.Web.Http;
     using System.Net;
-    using Core.Models;
+    using Core.Models.Board;
      
     public class TaskController : ApiController
     {

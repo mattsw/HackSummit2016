@@ -1,6 +1,6 @@
 ﻿namespace Hackathon.Repository.DataAccess
 {
-    using Core.Models;
+    using Core.Models.Board;
     using System.Data.SQLite;
 
     public interface IBoardItemRepository
