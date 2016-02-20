@@ -1,3 +1,15 @@
-﻿<div>
-    main view
+﻿<div class="drag">
+    <div class="list">
+        <label class="list-header">Open</label>
+        <ul dnd-list="vm.model.lists.open">
+            <!--TODO: dnd-inserted-->
+            <li ng-repeat="item in vm.model.lists.open"
+                dnd-draggable="item"
+                dnd-moved="vm.model.list.open.splice($index, 1)"
+                dnd-effect-allowed="move"
+                dnd-selected="vm.model.selected"
+                ng-class="{'selected': vm.model.selected === item}">
+            </li>
+        </ul>
+    </div>
 </div>

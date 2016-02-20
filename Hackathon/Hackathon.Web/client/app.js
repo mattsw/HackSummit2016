@@ -1,6 +1,8 @@
 ﻿(function (angular) {
+    'use strict';
+
     angular
-        .module('board', ['ui.router'])
+        .module('board', ['ui.router', 'dndLists'])
         .config(config)
         .run(run);
 
