@@ -1,0 +1,1 @@
+C:\git\HackSummit2016\Hackathon\Hackathon.Service\obj\Debug\Hackathon.Service.csprojResolveAssemblyReference.cache
