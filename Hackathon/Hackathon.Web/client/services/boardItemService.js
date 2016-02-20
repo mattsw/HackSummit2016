@@ -16,6 +16,10 @@
             };
         }
 
+        function getBoardItems(userId) {
+            return $http.get('api/task/' + userId);
+        }
+
         return service;
     }
 

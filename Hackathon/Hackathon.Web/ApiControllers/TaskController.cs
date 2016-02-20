@@ -8,7 +8,8 @@
     {
         public IHttpActionResult Get(string id)
         {
-            return StatusCode(HttpStatusCode.NotImplemented);
+            //TODO Fully implement this behavior
+            return Ok(new BoardState());
         }
 
         public IHttpActionResult Post(BoardItem[] boardItems)
