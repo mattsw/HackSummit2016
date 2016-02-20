@@ -3,8 +3,10 @@
         module('board').
         controller('MainCtrl', mainCtrl);
 
-    mainCtr.$inject = ['state'];
+    mainCtrl.$inject = ['$state'];
 
-
+    function mainCtrl($state) {
+        var vm = this;
+    }
 
 })(window.angular);

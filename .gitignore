@@ -1,1 +1,8 @@
-/build/ *.suo *.user  *.sdf bin/ obj/ Debug/
+/build/ 
+*.suo 
+*.user  
+*.sdf 
+bin/ 
+obj/ 
+Debug/
+.vs/
