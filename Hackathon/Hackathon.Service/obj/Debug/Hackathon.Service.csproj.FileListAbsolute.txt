@@ -16,3 +16,15 @@ C:\projects\HackSummit2016\Hackathon\Hackathon.Service\bin\Debug\System.Data.SQL
 C:\projects\HackSummit2016\Hackathon\Hackathon.Service\obj\Debug\Hackathon.Service.csprojResolveAssemblyReference.cache
 C:\projects\HackSummit2016\Hackathon\Hackathon.Service\obj\Debug\Hackathon.Service.dll
 C:\projects\HackSummit2016\Hackathon\Hackathon.Service\obj\Debug\Hackathon.Service.pdb
+C:\git\HackSummit2016\Hackathon\Hackathon.Service\bin\Debug\Hackathon.Service.dll.config
+C:\git\HackSummit2016\Hackathon\Hackathon.Service\bin\Debug\Hackathon.Service.dll
+C:\git\HackSummit2016\Hackathon\Hackathon.Service\bin\Debug\Hackathon.Service.pdb
+C:\git\HackSummit2016\Hackathon\Hackathon.Service\bin\Debug\Hackathon.Core.dll
+C:\git\HackSummit2016\Hackathon\Hackathon.Service\bin\Debug\Hackathon.Repository.dll
+C:\git\HackSummit2016\Hackathon\Hackathon.Service\bin\Debug\System.Data.SQLite.dll
+C:\git\HackSummit2016\Hackathon\Hackathon.Service\bin\Debug\Hackathon.Core.pdb
+C:\git\HackSummit2016\Hackathon\Hackathon.Service\bin\Debug\Hackathon.Repository.pdb
+C:\git\HackSummit2016\Hackathon\Hackathon.Service\bin\Debug\System.Data.SQLite.xml
+C:\git\HackSummit2016\Hackathon\Hackathon.Service\obj\Debug\Hackathon.Service.csprojResolveAssemblyReference.cache
+C:\git\HackSummit2016\Hackathon\Hackathon.Service\obj\Debug\Hackathon.Service.dll
+C:\git\HackSummit2016\Hackathon\Hackathon.Service\obj\Debug\Hackathon.Service.pdb
