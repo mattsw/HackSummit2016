@@ -9,6 +9,7 @@
         var vm = this;
 
         vm.model = tasks.data;
+        vm.model.selected = null;
         //vm.model = boardItemService.getBoardItemsForUser(2);
 
         vm.updateItemStatus = updateItemStatus;

@@ -13,5 +13,7 @@
                 task: '=task'
             }
         };
+
+        return directive;
     }
 })(window.angular);

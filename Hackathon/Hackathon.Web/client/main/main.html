@@ -1,11 +1,11 @@
 ﻿<div class="drag">
     <div class="list">
         <label class="list-header">Open</label>
-        <ul dnd-list="vm.model.lists.open"
+        <ul dnd-list="vm.model.open"
             dnd-inserted="vm.updateTaskStatus(item, 'open')">
-            <li ng-repeat="item in vm.model.lists.open"
+            <li ng-repeat="item in vm.model.open"
                 dnd-draggable="item"
-                dnd-moved="vm.model.list.open.splice($index, 1)"
+                dnd-moved="vm.model.open.splice($index, 1)"
                 dnd-effect-allowed="move"
                 dnd-selected="vm.model.selected"
                 ng-class="{'selected': vm.model.selected === item}">
@@ -15,11 +15,11 @@
     </div>
     <div class="list">
         <label class="list-header">Progress</label>
-        <ul dnd-list="vm.model.lists.progress"
+        <ul dnd-list="vm.model.progress"
                dnd-inserted="vm.updateTaskStatus(item, 'progress')">
-            <li ng-repeat="item in vm.model.lists.progress"
+            <li ng-repeat="item in vm.model.progress"
                 dnd-draggable="item"
-                dnd-moved="vm.model.list.progress.splice($index, 1)"
+                dnd-moved="vm.model.progress.splice($index, 1)"
                 dnd-effect-allowed="move"
                 dnd-selected="vm.model.selected"
                 ng-class="{'selected': vm.model.selected === item}">
@@ -29,11 +29,11 @@
     </div>
     <div class="list">
         <label class="list-header">Blocked</label>
-        <ul dnd-list="vm.model.lists.blocked"
+        <ul dnd-list="vm.model.blocked"
             dnd-inserted="vm.updateTaskStatus(item, 'blocked')">
-            <li ng-repeat="item in vm.model.lists.blocked"
+            <li ng-repeat="item in vm.model.blocked"
                 dnd-draggable="item"
-                dnd-moved="vm.model.lists.blocked.splice($index, 1)"
+                dnd-moved="vm.model.blocked.splice($index, 1)"
                 dnd-effect-allowed="move"
                 dnd-selected="vm.model.selected"
                 ng-class="{'selected': vm.model.selected === item}">
@@ -43,11 +43,11 @@
     </div>
     <div class="list">
         <label class="list-header">Done</label>
-        <ul dnd-list="vm.model.lists.done"
+        <ul dnd-list="vm.model.done"
             dnd-inserted="vm.updateTaskStatus(item, 'done')">
-            <li ng-repeat="item in vm.model.lists.done"
+            <li ng-repeat="item in vm.model.done"
                 dnd-draggable="item"
-                dnd-moved="vm.model.list.done.splice($index, 1)"
+                dnd-moved="vm.model.done.splice($index, 1)"
                 dnd-effect-allowed="move"
                 dnd-selected="vm.model.selected"
                 ng-class="{'selected': vm.model.selected === item}">
