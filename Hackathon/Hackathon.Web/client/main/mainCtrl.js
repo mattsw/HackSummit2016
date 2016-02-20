@@ -9,6 +9,8 @@
         var vm = this;
 
         vm.model = boardItemService.getBoardItems();
+        //vm.model = boardItemService.getBoardItemsForUser(2);
+
 
         vm.updateItemStatus = updateItemStatus;
 

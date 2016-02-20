@@ -7,7 +7,10 @@
 
     function boardItemService($http) {
         
-        var service = { getBoardItems: getBoardItems };
+        var service = {
+            getBoardItems: getBoardItems,
+            getBoardItemsForUser: getBoardItemsForUser
+        };
 
         function getBoardItems() {
             return  {
@@ -16,7 +19,7 @@
             };
         }
 
-        function getBoardItems(userId) {
+        function getBoardItemsForUser(userId) {
             return $http.get('api/task/' + userId);
         }
 
