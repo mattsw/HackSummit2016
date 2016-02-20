@@ -9,6 +9,12 @@
         var vm = this;
 
         vm.model = boardItemService.getBoardItems();
+
+        vm.updateItemStatus = updateItemStatus;
+
+        function updateItemStatus(item, status) {
+            item.status = status;
+        }
     }
 
 })(window.angular);

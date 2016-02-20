@@ -21,7 +21,8 @@ namespace Hackathon.Web
 
             bundles.Add(new ScriptBundle("~/js/lib").Include(
                 "~/Scripts/angular.js",
-                "~/Scripts/angular-ui-router.js"
+                "~/Scripts/angular-ui-router.js",
+                "~/Scripts/angular-drag-and-drop-lists.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/js/app").IncludeDirectory(

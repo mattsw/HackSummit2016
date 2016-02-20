@@ -1,11 +1,50 @@
 ﻿<div class="drag">
     <div class="list">
         <label class="list-header">Open</label>
-        <ul dnd-list="vm.model.lists.open">
-            <!--TODO: dnd-inserted-->
+        <ul dnd-list="vm.model.lists.open"
+            dnd-inserted="vm.updateTaskStatus(item, 'open')">
             <li ng-repeat="item in vm.model.lists.open"
                 dnd-draggable="item"
                 dnd-moved="vm.model.list.open.splice($index, 1)"
+                dnd-effect-allowed="move"
+                dnd-selected="vm.model.selected"
+                ng-class="{'selected': vm.model.selected === item}">
+            </li>
+        </ul>
+    </div>
+    <div class="list">
+        <label class="list-header">Progress</label>
+        <ul dnd-list="vm.model.lists.progress"
+               dnd-inserted="vm.updateTaskStatus(item, 'progress')">
+            <li ng-repeat="item in vm.model.lists.progress"
+                dnd-draggable="item"
+                dnd-moved="vm.model.list.progress.splice($index, 1)"
+                dnd-effect-allowed="move"
+                dnd-selected="vm.model.selected"
+                ng-class="{'selected': vm.model.selected === item}">
+            </li>
+        </ul>
+    </div>
+    <div class="list">
+        <label class="list-header">Blocked</label>
+        <ul dnd-list="vm.model.lists.blocked"
+            dnd-inserted="vm.updateTaskStatus(item, 'blocked')">
+            <li ng-repeat="item in vm.model.lists.blocked"
+                dnd-draggable="item"
+                dnd-moved="vm.model.lists.blocked.splice($index, 1)"
+                dnd-effect-allowed="move"
+                dnd-selected="vm.model.selected"
+                ng-class="{'selected': vm.model.selected === item}">
+            </li>
+        </ul>
+    </div>
+    <div class="list">
+        <label class="list-header">Done</label>
+        <ul dnd-list="vm.model.lists.done"
+            dnd-inserted="vm.updateTaskStatus(item, 'done')">
+            <li ng-repeat="item in vm.model.lists.done"
+                dnd-draggable="item"
+                dnd-moved="vm.model.list.done.splice($index, 1)"
                 dnd-effect-allowed="move"
                 dnd-selected="vm.model.selected"
                 ng-class="{'selected': vm.model.selected === item}">
