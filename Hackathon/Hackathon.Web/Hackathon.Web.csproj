@@ -193,6 +193,7 @@
     <Content Include="client\app.js" />
     <Content Include="client\main\main.html" />
     <Content Include="client\main\mainCtrl.js" />
+    <Content Include="client\services\boardItemService.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
