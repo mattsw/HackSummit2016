@@ -1,13 +1,15 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Hackathon.Core.Models.Board.Enums;
 
 namespace Hackathon.Service.BoardItems
 {
-    using System;
     using Core.Models.Board;
     using Repository.DataAccess;
+
     public interface IBoardItemService
     {
-        void SaveBoardItems(BoardItem[] itemsToSave);
+        void SaveBoardItems(BoardState itemsToSave);
         void SaveBoardItem(BoardItem itemToSave);
         BoardState GetBoardItems();
     }
@@ -27,7 +29,10 @@ namespace Hackathon.Service.BoardItems
             var items = BoardItemRepository.SelectBoardItems();
             return new BoardState
             {
-                Open = items.ToList()
+                Open = items.Where(item => item.Status == BoardStatus.Open).ToList(),
+                Progress = items.Where(item => item.Status == BoardStatus.Progress).ToList(),
+                Blocked = items.Where(item => item.Status == BoardStatus.Blocked).ToList(),
+                Done = items.Where(item => item.Status == BoardStatus.Done).ToList()
             };
         }
 
@@ -36,9 +41,9 @@ namespace Hackathon.Service.BoardItems
             BoardItemRepository.CreateBoardItems(new[] { itemToSave});
         }
 
-        public void SaveBoardItems(BoardItem[] itemsToSave)
+        public void SaveBoardItems(BoardState itemsToSave)
         {
-            BoardItemRepository.CreateBoardItems(itemsToSave);
+            BoardItemRepository.UpdateBoardItems(itemsToSave.Done.Union(itemsToSave.Open).Union(itemsToSave.Blocked).Union(itemsToSave.Progress));
         }
 
     }

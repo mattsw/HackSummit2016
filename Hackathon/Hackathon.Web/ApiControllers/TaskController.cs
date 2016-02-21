@@ -35,10 +35,10 @@
             return boardState;
         }
 
-        public IHttpActionResult Post(BoardItem[] boardItems)
+        public IHttpActionResult Post(BoardState board)
         {
-            BoardItemService.SaveBoardItems(boardItems);
-            return Ok(boardItems);
+            BoardItemService.SaveBoardItems(board);
+            return Ok(board);
         }
     }
 }

@@ -2,7 +2,7 @@
     <div class="list">
         <label class="list-header">Open</label>
         <ul dnd-list="vm.model.open"
-            dnd-inserted="vm.updateTaskStatus(item, 'open')">
+            dnd-inserted="vm.updateItemStatus(item, 0)">
             <li ng-repeat="item in vm.model.open"
                 dnd-draggable="item"
                 dnd-moved="vm.model.open.splice($index, 1)"
@@ -16,7 +16,7 @@
     <div class="list">
         <label class="list-header">Progress</label>
         <ul dnd-list="vm.model.progress"
-               dnd-inserted="vm.updateTaskStatus(item, 'progress')">
+               dnd-inserted="vm.updateItemStatus(item, 1)">
             <li ng-repeat="item in vm.model.progress"
                 dnd-draggable="item"
                 dnd-moved="vm.model.progress.splice($index, 1)"
@@ -30,7 +30,7 @@
     <div class="list">
         <label class="list-header">Blocked</label>
         <ul dnd-list="vm.model.blocked"
-            dnd-inserted="vm.updateTaskStatus(item, 'blocked')">
+            dnd-inserted="vm.updateItemStatus(item, 2)">
             <li ng-repeat="item in vm.model.blocked"
                 dnd-draggable="item"
                 dnd-moved="vm.model.blocked.splice($index, 1)"
@@ -44,7 +44,7 @@
     <div class="list">
         <label class="list-header">Done</label>
         <ul dnd-list="vm.model.done"
-            dnd-inserted="vm.updateTaskStatus(item, 'done')">
+            dnd-inserted="vm.updateItemStatus(item, 3)">
             <li ng-repeat="item in vm.model.done"
                 dnd-draggable="item"
                 dnd-moved="vm.model.done.splice($index, 1)"
@@ -61,5 +61,7 @@
     <label>Summary</label>
     <input ng-model="vm.newItem.summary" type="text" />
     <button ng-click="vm.addItem(vm.newItem)">Add New Item</button>
+
+    <button ng-click="vm.saveTasks()">Save</button>
 
 </div>

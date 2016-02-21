@@ -14,6 +14,7 @@
 
         vm.updateItemStatus = updateItemStatus;
         vm.addItem = addItem;
+        vm.saveTasks = saveTasks;
 
         function updateItemStatus(item, status) {
             item.status = status;
@@ -23,13 +24,17 @@
             boardItemService.saveBoardItem(item).then(success, error);
 
             function success(response) {
-                vm.model.open.push(item);
+                vm.model.open.push  (item);
             }
 
             function error(response) {
 
 
             }
+        }
+
+        function saveTasks() {
+            boardItemService.saveBoardItems(vm.model).then(success, error);
         }
     }
 
