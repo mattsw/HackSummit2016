@@ -55,4 +55,11 @@
             </li>
         </ul>
     </div>
+
+    <label>Description</label>
+    <input ng-model="vm.newItem.description" type="text" />
+    <label>Summary</label>
+    <input ng-model="vm.newItem.summary" type="text" />
+    <button ng-click="vm.addItem(vm.newItem)">Add New Item</button>
+
 </div>

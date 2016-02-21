@@ -6,6 +6,7 @@
     public interface IBoardItemService
     {
         void SaveBoardItems(BoardItem[] itemsToSave);
+        void SaveBoardItem(BoardItem itemToSave);
     }
 
     public class BoardItemService : IBoardItemService
@@ -18,9 +19,14 @@
             BoardItemRepository = new BoardItemRepository();
         }
 
+        public void SaveBoardItem(BoardItem itemToSave)
+        {
+            BoardItemRepository.CreateBoardItems(new[] { itemToSave});
+        }
+
         public void SaveBoardItems(BoardItem[] itemsToSave)
         {
-            BoardItemRepository.SaveBoardItems(itemsToSave);
+            BoardItemRepository.CreateBoardItems(itemsToSave);
         }
 
     }

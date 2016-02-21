@@ -110,3 +110,9 @@ C:\git\HackSummit2016\Hackathon\Hackathon.Web\bin\System.Data.SQLite.xml
 C:\git\HackSummit2016\Hackathon\Hackathon.Web\obj\Debug\Hackathon.Web.csprojResolveAssemblyReference.cache
 C:\git\HackSummit2016\Hackathon\Hackathon.Web\obj\Debug\Hackathon.Web.dll
 C:\git\HackSummit2016\Hackathon\Hackathon.Web\obj\Debug\Hackathon.Web.pdb
+C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\EntityFramework.dll
+C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\EntityFramework.SqlServer.dll
+C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\System.Data.SQLite.EF6.dll
+C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\System.Data.SQLite.Linq.dll
+C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\EntityFramework.xml
+C:\projects\HackSummit2016\Hackathon\Hackathon.Web\bin\EntityFramework.SqlServer.xml

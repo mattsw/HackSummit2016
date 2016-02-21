@@ -13,6 +13,12 @@
             BoardItemService = new BoardItemService();
         }
 
+        public IHttpActionResult Put(BoardItem boardItem)
+        {
+            BoardItemService.SaveBoardItem(boardItem);
+            return Ok(boardItem);
+        }
+
         public IHttpActionResult Get(string id)
         {
             //TODO Fully implement this behavior

@@ -9,7 +9,8 @@
         
         var service = {
             getBoardItems: getBoardItems,
-            getBoardItemsForUser: getBoardItemsForUser
+            getBoardItemsForUser: getBoardItemsForUser,
+            saveBoardItem: saveBoardItem
         };
 
         function getBoardItems() {
@@ -28,6 +29,18 @@
 
             function error(response) {
                 console.log('Didnt work from server');
+            }
+        }
+
+        function saveBoardItem(boardItem) {
+            $http.put('api/task', boardItem).then(success, error);
+
+            function success(response) {
+                return response;
+            }
+
+            function error(response) {
+                console.log('Unable to save board item.');
             }
         }
 
