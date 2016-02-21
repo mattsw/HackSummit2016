@@ -6,7 +6,8 @@
 
     public interface IBoardItemRepository
     {
-        void SaveBoardItems(BoardItem[] itemsToSave);
+        void CreateBoardItems(BoardItem[] itemsToCreate);
+        void UpdateBoardItems(BoardItem[] itemsToUpdate)
     }
 
     public class BoardItemRepository
@@ -28,11 +29,11 @@
             }
         }
 
-        public void CreateBoardItems(BoardItem[] itemsToSave)
+        public void CreateBoardItems(BoardItem[] itemsToCreate)
         {
             using (var connection = new SQLiteConnection("Data Source=BoardItems.sqlite;Version=3;"))
             {
-                foreach (var item in itemsToSave)
+                foreach (var item in itemsToCreate)
                 {
                     var command = new SQLiteCommand("insert into BoardItem (Description, Summary, Status) " +
                         $"values ({item.Description}, {item.Summary}, {item.Status} )"
