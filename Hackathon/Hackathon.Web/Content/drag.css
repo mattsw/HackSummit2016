@@ -14,7 +14,7 @@ label.list-header {
     color: white;
 }
 
-.drag div.list {
+div.list {
     float: left;
     width: 20%;
     margin: 2%;

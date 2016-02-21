@@ -17,7 +17,8 @@ namespace Hackathon.Web
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/drag.css"));
 
             bundles.Add(new ScriptBundle("~/js/lib").Include(
                 "~/Scripts/angular.js",
