@@ -26,16 +26,14 @@
             {
                 File.Create(HttpContext.Current.Server.MapPath("~/App_Data/BoardItems.sqlite"));
                 DatabaseFile = HttpContext.Current.Server.MapPath("~/App_Data/BoardItems.sqlite");
-                using (var connection = new SQLiteConnection($"Data Source={DatabaseFile};Version=3;"))
+                using (var connection = new SQLiteConnection("Data Source="+ DatabaseFile + ";Version=3;"))
                 {
-
                     var command = new SQLiteCommand("create table BoardItem " +
                         "(TaskID int identity(1,1) primary key" +
                         ", Description varchar(255) not null" +
                         ", Summary varchar(255)" +
                         ", Status varchar(255)" +
-                        ", Timebox float) " +
-                        "CONSTRAINT pk_TaskId PRIMARY KEY (TaskID)"
+                        ", Timebox float)"
                         , connection);
                     connection.Open();
                     command.ExecuteNonQuery();
@@ -46,30 +44,30 @@
 
         public void CreateBoardItems(BoardItem[] itemsToCreate)
         {
-            using (var connection = new SQLiteConnection("Data Source=BoardItems.sqlite;Version=3;"))
+            using (var connection = new SQLiteConnection("Data Source=" + DatabaseFile + ";Version=3;"))
             {
-                connection.Open();
                 foreach (var item in itemsToCreate)
                 {
                     var command = new SQLiteCommand("insert into BoardItem (Description, Summary, Status, Timebox) " +
-                        $"values ({item.Description}, {item.Summary}, {item.Status}, {item.Timebox} )"
+                        string.Format("values ('{0}', '{1}', '{2}', {3} )", item.Description, item.Summary, item.Status, item.Timebox)
                         , connection);
-                    
+                    connection.Open();
                     command.ExecuteNonQuery();
+                    connection.Close();
                 }
-                connection.Close();
+                
             }
         }
 
         public void UpdateBoardItems(BoardItem[] itemsToUpdate)
         {
-            using (var connection = new SQLiteConnection("Data Source=BoardItems.sqlite;Version=3;"))
+            using (var connection = new SQLiteConnection("Data Source=" + DatabaseFile + ";Version=3;"))
             {
                 foreach (var item in itemsToUpdate)
                 {
                     var command = new SQLiteCommand("update BoardItem " +
-                        $"set Description = {item.Description}, Summary = {item.Summary}, Status = {item.Status}, Timebox = {item.Timebox} " +
-                        $"where TaskID = {item.TaskID}"
+                        string.Format("set Description = '{0}', Summary = '{1}', Status = '{2}', Timebox = {3} ", item.Description, item.Summary, item.Status, item.Timebox) +
+                        string.Format("where TaskID = {0}", item.TaskID)
                         , connection);
                     command.ExecuteNonQuery();
                 }
@@ -78,26 +76,30 @@
 
         public BoardItem[] SelectBoardItems()
         {
-            using (var connection = new SQLiteConnection("Data Source=BoardItems.sqlite;Version=3;"))
+            using (var connection = new SQLiteConnection("Data Source=" + DatabaseFile + ";Version=3;"))
             {
                 var command = new SQLiteCommand("select * from BoardItem"
                     , connection);
+                connection.Open();
                 var reader = command.ExecuteReader();
 
                 if(reader.HasRows)
                 {
                     var boardItems = new List<BoardItem>();
+                    var i = 0;
                     while(reader.Read())
                     {
-                        boardItems.Add(new BoardItem() { TaskID = int.Parse(reader["TaskID"].ToString())
+                        boardItems.Add(new BoardItem()
+                        {
+                            TaskID = ++i
                             , Description = reader["Description"].ToString()
                             , Summary = reader["Summary"].ToString()
-                            , Status = (BoardStatus)System.Enum.Parse(typeof(BoardStatus), reader["Status"].ToString())
-                            , Timebox = decimal.Parse(reader["Timebox"].ToString()) });
+                        });
                     }
-
+                    connection.Close();
                     return boardItems.ToArray();
                 }
+                connection.Close();
             }
             return new BoardItem[0];
         }

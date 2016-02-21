@@ -22,7 +22,7 @@
         public IHttpActionResult Get(string id)
         {
             //TODO Fully implement this behavior
-            return Ok(GenerateStubbedBoardItems(new BoardState()));
+            return Ok(BoardItemService.GetBoardItems());
         }
 
         private BoardState GenerateStubbedBoardItems(BoardState boardState)

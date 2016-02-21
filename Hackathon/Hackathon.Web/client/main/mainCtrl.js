@@ -23,7 +23,7 @@
             boardItemService.saveBoardItem(item).then(success, error);
 
             function success(response) {
-                vm.model.open(item);
+                vm.model.open.push(item);
             }
 
             function error(response) {

@@ -1,4 +1,6 @@
-﻿namespace Hackathon.Service.BoardItems
+﻿using System.Linq;
+
+namespace Hackathon.Service.BoardItems
 {
     using System;
     using Core.Models.Board;
@@ -7,6 +9,7 @@
     {
         void SaveBoardItems(BoardItem[] itemsToSave);
         void SaveBoardItem(BoardItem itemToSave);
+        BoardState GetBoardItems();
     }
 
     public class BoardItemService : IBoardItemService
@@ -17,6 +20,15 @@
         public BoardItemService()
         {
             BoardItemRepository = new BoardItemRepository();
+        }
+
+        public BoardState GetBoardItems()
+        {
+            var items = BoardItemRepository.SelectBoardItems();
+            return new BoardState
+            {
+                Open = items.ToList()
+            };
         }
 
         public void SaveBoardItem(BoardItem itemToSave)

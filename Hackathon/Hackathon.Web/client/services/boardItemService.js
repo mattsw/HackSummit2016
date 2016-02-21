@@ -33,7 +33,7 @@
         }
 
         function saveBoardItem(boardItem) {
-            $http.put('api/task', boardItem).then(success, error);
+            return $http.put('api/task', boardItem).then(success, error);
 
             function success(response) {
                 return response;
