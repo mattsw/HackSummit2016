@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Models\Board\BoardItem.cs" />
     <Compile Include="Models\Board\BoardState.cs" />
+    <Compile Include="Models\Board\Enums\BoardStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
