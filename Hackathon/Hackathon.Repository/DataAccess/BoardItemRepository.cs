@@ -28,6 +28,7 @@
                 DatabaseFile = HttpContext.Current.Server.MapPath("~/App_Data/BoardItems.sqlite");
                 using (var connection = new SQLiteConnection($"Data Source={DatabaseFile};Version=3;"))
                 {
+
                     var command = new SQLiteCommand("create table BoardItem " +
                         "(TaskID int identity(1,1) primary key" +
                         ", Description varchar(255) not null" +
