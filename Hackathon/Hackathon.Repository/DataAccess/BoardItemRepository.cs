@@ -7,7 +7,7 @@
     public interface IBoardItemRepository
     {
         void CreateBoardItems(BoardItem[] itemsToCreate);
-        void UpdateBoardItems(BoardItem[] itemsToUpdate)
+        void UpdateBoardItems(BoardItem[] itemsToUpdate);
     }
 
     public class BoardItemRepository
