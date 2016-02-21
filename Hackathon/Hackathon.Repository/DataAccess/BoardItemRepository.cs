@@ -1,6 +1,8 @@
 ﻿namespace Hackathon.Repository.DataAccess
 {
     using Core.Models.Board;
+    using Core.Models.Board.Enums;
+    using System.Collections.Generic;
     using System.Data.SQLite;
     using System.IO;
 
@@ -8,6 +10,7 @@
     {
         void CreateBoardItems(BoardItem[] itemsToCreate);
         void UpdateBoardItems(BoardItem[] itemsToUpdate);
+        BoardItem[] SelectBoardItems();
     }
 
     public class BoardItemRepository
@@ -56,6 +59,31 @@
                     command.ExecuteNonQuery();
                 }
             }
+        }
+
+        public BoardItem[] SelectBoardItems()
+        {
+            using (var connection = new SQLiteConnection("Data Source=BoardItems.sqlite;Version=3;"))
+            {
+                var command = new SQLiteCommand("select * from BoardItem"
+                    , connection);
+                var reader = command.ExecuteReader();
+
+                if(reader.HasRows)
+                {
+                    var boardItems = new List<BoardItem>();
+                    while(reader.Read())
+                    {
+                        boardItems.Add(new BoardItem() { TaskID = int.Parse(reader["TaskID"].ToString())
+                            , Description = reader["Description"].ToString()
+                            , Summary = reader["Summary"].ToString()
+                            , Status = (BoardStatus)System.Enum.Parse(typeof(BoardStatus), reader["Status"].ToString()) });
+                    }
+
+                    return boardItems.ToArray();
+                }
+            }
+            return new BoardItem[0];
         }
     }
 }
