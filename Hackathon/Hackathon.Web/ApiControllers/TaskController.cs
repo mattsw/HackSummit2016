@@ -3,9 +3,16 @@
     using System.Web.Http;
     using System.Net;
     using Core.Models.Board;
-     
+    using Service.BoardItems;
     public class TaskController : ApiController
     {
+        public IBoardItemService BoardItemService { get; }
+
+        public TaskController()
+        {
+            BoardItemService = new BoardItemService();
+        }
+
         public IHttpActionResult Get(string id)
         {
             //TODO Fully implement this behavior
@@ -24,7 +31,8 @@
 
         public IHttpActionResult Post(BoardItem[] boardItems)
         {
-            return StatusCode(HttpStatusCode.NotImplemented);
+            BoardItemService.SaveBoardItems(boardItems);
+            return Ok(boardItems);
         }
     }
 }
